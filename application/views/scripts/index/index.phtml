@@ -1,0 +1,35 @@
+<div id="body">
+    <div id="ctn">
+        <form name="frmLogeo" method="post" action=""  >
+            <div id="name_empresa">CHIKEN'S NANDO</div>
+            <div class="logo" ></div>
+            <div class="ctnform">
+                <div class="row">
+                    <div class="icon">
+                        <span class="icon-user"></span>
+                    </div>
+                    <div class="ctncaja">
+                        <?php echo $this->form->user; ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon ">
+                        <span class="icon-key"></span>
+                    </div><div class="ctncaja">
+                        <?php echo $this->form->clave; ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ctncaja">
+                        <?php echo $this->form->btnentrar; ?><span class="icon_entrar icon-arrow-right"></span>
+                    </div>
+                </div>
+                <div align="center"><label style="color: red"><?php echo $this->errorlogin; ?></label></div>
+            </div>
+        </form>
+    </div>
+</div>
+<?php 
+
+?>
+
