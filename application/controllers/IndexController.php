@@ -24,7 +24,7 @@ class IndexController extends Zend_Controller_Action {
                             echo $f->direccion;
                         endforeach;
                     }else{
-                        echo "Datos incorrectos";
+                        $this->view->errorlogin="¡ Usuario y/o Contraseña incorrecto(s) !";
                     }
                 }
             }
