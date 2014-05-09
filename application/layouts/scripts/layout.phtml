@@ -5,9 +5,45 @@
         <meta charset="utf-8" >
         <title>Polleria Chicken Nando</title>
         <meta name="description" content="Sistema de ventas" >
+        
     </head>
     <body>
-        <?php echo $this->layout()->content; ?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery.min.js" ><\/script>')</script>
+        <?php 
+        $sesion=new Zend_Session_Namespace("sesion");
+        if(isset($sesion->id)){
+            if($sesion->tipo=="A"){
+                if($sesion->acceso==1){
+        ?>
+<!--        <header>
+            <nav>
+                <ul>
+                    <li><a href="../compras/registro">Compra Pollo</a></li>
+                    <li>Ventas</li>
+                    <li>Reportes</li>
+                </ul>
+            </nav>
+        </header>-->
+        <?php
+                    echo $this->layout()->content;
+                }else{
+                    echo "Acceso denegado. Pongase en contacto con el administrador del sistema.";
+                }
+            }elseif($sesion->tipo=="O"){
+                if($sesion->acceso==1){
+                    
+                    echo $this->layout()->content;
+                }else{
+                    echo "Acceso denegado. Pongase en contacto con el administrador del sistema.";
+                }   
+            }  
+        }  else {
+            echo $this->layout()->content;
+        }
+        
+        ?>
+        
     </body>
 </html>
 

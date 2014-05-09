@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?ocpumo');
+    src:url('../fonts/icomoon.eot?#iefixocpumo') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?ocpumo') format('woff'),
+        url('../fonts/icomoon.ttf?ocpumo') format('truetype'),
+        url('../fonts/icomoon.svg?ocpumo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+    content: "\e600";
+    color: #000;
+    font-size: 20px;
+}
+.ctnregistro{
+    background: #CCC;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 650px;
+}
+.header_tipoave{
+    background: #AAA;
+    border-bottom: 1px solid #666;
+    height: 32px;
+}
+.tipo_ave{
+    background-color: #999;
+
+    border-radius: 5px 5px 0px 0px;
+    color: #000;
+    display: inline-block;
+    float: left;
+    font-family: arial;
+    font-size: 15px;
+    margin:5px 0 0 3.5px; 
+    padding: 5px; 
+    text-align: center;
+    text-decoration: none;
+    width: 47.5%;
+}
+.active{
+    background: #333;
+    color: #FFF;
+}
+
+ul.ctn_proveedor{
+    display: block;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 70%;
+    height: 35px;
+    padding: 10px 0px;
+}
+ul.ctn_proveedor li{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 33%;
+}
+
+a.btn_proveedor{
+    background: darkkhaki;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+a.btn_proveedor label{
+    cursor: pointer;
+    font-family: arial;
+    font-size: 14px;
+}
+
+.table_data{
+    border-color: #666;
+    display: block;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.textbox{
+    background: #CCC;
+    border: 1px solid #BBB;
+    color: #000;
+    padding: 3px 0;
+    text-align: center;
+}
+.textvacio{
+    text-align: center;
+    border: 1px solid #333;
+    padding: 3px 0px;
+}
+
+.link_editar{    
+    height: 22px;
+    display: inline-block;
+    width: 22px;
+    text-align: center;
+    border-radius: 3px;
+    padding-top: 2px;
+    margin-top: 2px;
+}
+
+.link_editar:hover{
+    box-shadow: 0px 0px 1px rgba(0,0,0,.9);
+}

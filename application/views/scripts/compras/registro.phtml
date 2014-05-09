@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="../css/compra_registro.css" >
+<script src="../js/compra_registro.js"></script>
+<section>
+    <div class="ctnregistro">
+        <div class="header_tipoave">
+            <a class="tipo_ave active" href="#">Registrar compra de pollo</a>
+            <a class="tipo_ave" href="#">Registrar compras de gallina</a>
+        </div>
+        <div class="body_datos">
+            <ul class="ctn_proveedor">
+                <li><a class="btn_proveedor" href=""><span class="icon-user"></span></span><label>Yugo</label></a></li>
+                <li><a class="btn_proveedor" href=""><span class="icon-user"></span></span><label>Tecnica</label></a></li>
+                <li><a class="btn_proveedor" href=""><span class="icon-user"></span></span><label>Sr. Vasquez</label></a></li>
+            </ul>
+            <div><label>Costo Unitario (S/)</label><input type="text" name="cu" class="costounit" id="idcostunit" ></div>
+            <div class="ctn_table_data">
+                <table width="600" id="tbldata" class="table_data" border="1" cellspadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td width="50">Nº</td>
+                            <td width="120">Cantidad</td>
+                            <td width="120">Kilaje (Kg)</td>
+                            <td width="110">SubTotal (S/)</td>
+                            <td width="100">Modificar</td>
+                            <td width="100">Eliminar</td>
+                        </tr>
+                        <tr class="row_delete">
+                            <td><span id="num">1</span></td>
+                            <td><input type="text" name="cantidad" id="cantidad" class="textvacio"  ></td>
+                            <td><input type="text" name="kilaje" id="kilaje" class="textvacio" ></td>
+                            <td><input type="button" name="btn" value="Agregar" id="btnagregar" class="btn_add" onclick="addcarrito();"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </table>
+                <table width="600" class="table_data" border="1" cellspadding="0" cellspacing="0">
+                        <tr>
+                            <td width="50">&nbsp;</td>
+                            <td width="120">&nbsp;</td>
+                            <td width="120">&nbsp;</td>
+                            <td width="110">&nbsp;</td>
+                            <td width="100">&nbsp;</td>
+                            <td width="100">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td><span id="cantidad_total">9999.99</span></td>
+                            <td><span id="kilaje_total">9999.99</span></td>
+                            <td><span id="subtotal_total">9999.99</span></td>
+                            <td colspan="2">
+                                <input type="button" id="btnguardar" value="Guardar" onclick="guardarCarrito();" >
+                                <input type="button" id="btncancelar" value="Cancelar" >
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div>Lista de Compras</div>
+    <table border='1'>
+        <?php 
+        $data=new Zend_Session_Namespace("comprapollo");
+        if(isset($data->lista)){ 
+        foreach($data->lista as $k=>$v):
+        ?>
+        <tr>
+            <td><?php echo $v["cantidad"];?></td>
+            <td><?php echo $v["kilaje"];?></td>
+            <td><?php echo $v["subtotal"];?></td>
+        </tr>
+        <?php
+        endforeach;
+        }
+        ?>
+    </table>
+</section>
+
